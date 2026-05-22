@@ -32,9 +32,7 @@ jobs:
 
           python -m pydoc -w blog.models
           python -m pydoc -w blog.views
-          python -m pydoc -w blog.urls
-          python -m pydoc -w blog.admin
-          python -m pydoc -w blog.apps
+
 
           mv *.html docs/
 
