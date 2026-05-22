@@ -24,12 +24,11 @@ jobs:
           pip install django
 
       - name: Generar documentació
+        working-directory: MY_SITE
         run: |
-          cd MY_SITE
-
-          export PYTHONPATH=$(pwd)
-
           mkdir docs
+
+          export PYTHONPATH=$PWD
 
           python -m pydoc -w blog.models
           python -m pydoc -w blog.views
