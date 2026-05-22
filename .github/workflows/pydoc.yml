@@ -33,6 +33,10 @@ jobs:
           python gen-docs.py
           mv *.html docs/
 
+      - name: Copiar CSS
+        run: |
+          cp style.css docs/
+
       - name: Publicar GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
