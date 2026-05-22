@@ -19,6 +19,7 @@ També s’ha treballat amb GitHub i documentació automàtica amb Pydoc.
 
 ---
 
+
 # Instal·lació ràpida
 
 ## Clonar el repositori
@@ -132,6 +133,14 @@ http://127.0.0.1:8000/
 - Pydoc
 
 ---
+
+---
+
+# Documentació Pydoc
+
+La documentació automàtica del projecte es pot consultar aquí:
+
+https://zakariabourk.github.io/Django/
 
 # Autor
 
