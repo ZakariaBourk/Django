@@ -19,6 +19,15 @@ També s’ha treballat amb GitHub i documentació automàtica amb Pydoc.
 
 ---
 
+<<<<<<< HEAD
+=======
+# Documentació Pydoc
+
+La documentació automàtica del projecte es pot consultar aquí:
+
+https://zakariabourk.github.io/Django/
+
+>>>>>>> 07b7491e74480a154c747eb1cca11d722d319569
 
 # Instal·lació ràpida
 
