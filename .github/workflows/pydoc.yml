@@ -25,16 +25,17 @@ jobs:
         run: |
           pip install django
 
-      - name: Generar documentació
-        working-directory: MY_SITE
+      - name: Crear carpeta docs
+        run: mkdir -p docs
+
+      - name: Generar documentació Pydoc
         run: |
-          mkdir docs
+          export DJANGO_SETTINGS_MODULE=MY_SITE.settings
 
-          export PYTHONPATH=$PWD
-
-          python -m pydoc -w blog.models
           python -m pydoc -w blog.views
-
+          python -m pydoc -w blog.models
+          python -m pydoc -w blog.urls
+          python -m pydoc -w blog.admin
 
           mv *.html docs/
 
