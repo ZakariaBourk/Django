@@ -1,9 +1,12 @@
-name: Generate Pydoc
+name: Generar documentació Pydoc
 
 on:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
 
 jobs:
   build-docs:
@@ -18,9 +21,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Instal·lar dependències
+      - name: Instal·lar Django
         run: |
-          python -m pip install --upgrade pip
           pip install django
 
       - name: Generar documentació
@@ -40,4 +42,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./MY_SITE/.github/workflows
+          publish_dir: ./docs
