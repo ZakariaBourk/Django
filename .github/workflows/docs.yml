@@ -25,13 +25,17 @@ jobs:
 
       - name: Generar documentació
         run: |
+          cd MY_SITE
+
+          export PYTHONPATH=$(pwd)
+
           mkdir docs
 
-          python -m pydoc -w MY_SITE.blog.models
-          python -m pydoc -w MY_SITE.blog.views
-          python -m pydoc -w MY_SITE.blog.urls
-          python -m pydoc -w MY_SITE.blog.admin
-          python -m pydoc -w MY_SITE.blog.apps
+          python -m pydoc -w blog.models
+          python -m pydoc -w blog.views
+          python -m pydoc -w blog.urls
+          python -m pydoc -w blog.admin
+          python -m pydoc -w blog.apps
 
           mv *.html docs/
 
@@ -39,4 +43,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          publish_dir: ./MY_SITE/docs
