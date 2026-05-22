@@ -25,17 +25,12 @@ jobs:
         run: |
           pip install django
 
-      - name: Generar documentació
-        working-directory: MY_SITE
+      - name: Crear carpeta docs
+        run: mkdir -p docs
+
+      - name: Executar script de documentació
         run: |
-          mkdir docs
-
-          export PYTHONPATH=$PWD
-
-          python -m pydoc -w blog.models
-          python -m pydoc -w blog.views
-
-
+          python gen-docs.py
           mv *.html docs/
 
       - name: Publicar GitHub Pages
