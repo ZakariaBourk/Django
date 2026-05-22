@@ -1,0 +1,86 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif !important;
+    background: #f3f4f6 !important;
+    color: #1f2937 !important;
+    margin: 0 !important;
+    padding: 40px !important;
+    line-height: 1.7 !important;
+}
+
+/* Tarjetas principales */
+table {
+    width: 100% !important;
+    background: white !important;
+    border-radius: 18px !important;
+    padding: 25px !important;
+    margin-bottom: 30px !important;
+    border-collapse: collapse !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+}
+
+/* Cabecera azul */
+table.heading {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+    color: white !important;
+}
+
+/* Texto cabecera */
+table.heading * {
+    color: white !important;
+}
+
+/* Títulos */
+h1, h2, h3 {
+    color: #111827 !important;
+    margin-bottom: 15px !important;
+}
+
+/* Links */
+a {
+    color: #2563eb !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    transition: 0.2s !important;
+}
+
+a:hover {
+    color: #1d4ed8 !important;
+    text-decoration: underline !important;
+}
+
+/* Código */
+code {
+    background: #e5e7eb !important;
+    padding: 3px 8px !important;
+    border-radius: 6px !important;
+    font-family: Consolas, monospace !important;
+}
+
+/* Separadores */
+hr {
+    border: none !important;
+    height: 1px !important;
+    background: #d1d5db !important;
+    margin: 30px 0 !important;
+}
+
+/* Texto general */
+td, p, li {
+    font-size: 16px !important;
+}
+
+/* Métodos y clases */
+strong {
+    color: #111827 !important;
+}
+
+/* Espaciado */
+td {
+    padding: 8px 0 !important;
+}
+
+/* Efecto hover tarjetas */
+table:hover {
+    transform: translateY(-2px);
+    transition: 0.2s;
+}
