@@ -26,15 +26,17 @@ jobs:
       - name: Generar documentació
         run: |
           cd MY_SITE
-
+      
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
+      
           mkdir docs
-
-          pydoc -w blog.models
-          pydoc -w blog.views
-          pydoc -w blog.urls
-          pydoc -w blog.admin
-          pydoc -w blog.apps
-
+      
+          python -m pydoc -w blog.models
+          python -m pydoc -w blog.views
+          python -m pydoc -w blog.urls
+          python -m pydoc -w blog.admin
+          python -m pydoc -w blog.apps
+      
           mv *.html docs/
 
       - name: Publicar GitHub Pages
