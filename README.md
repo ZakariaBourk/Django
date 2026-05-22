@@ -136,12 +136,6 @@ http://127.0.0.1:8000/
 
 ---
 
-# Documentació Pydoc
-
-La documentació automàtica del projecte es pot consultar aquí:
-
-https://zakariabourk.github.io/Django/
-
 # Autor
 
 Zakaria EL Bourkhissi
