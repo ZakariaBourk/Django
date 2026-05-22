@@ -144,4 +144,4 @@ https://zakariabourk.github.io/Django/
 
 # Autor
 
-Projecte desenvolupat per a l’assignatura de Programació.
+Zakaria EL Bourkhissi
