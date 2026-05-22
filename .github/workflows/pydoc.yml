@@ -28,15 +28,9 @@ jobs:
       - name: Crear carpeta docs
         run: mkdir -p docs
 
-      - name: Generar documentació Pydoc
+      - name: Executar script de documentació
         run: |
-          export DJANGO_SETTINGS_MODULE=MY_SITE.settings
-
-          python -m pydoc -w blog.views
-          python -m pydoc -w blog.models
-          python -m pydoc -w blog.urls
-          python -m pydoc -w blog.admin
-
+          python gen-docs.py
           mv *.html docs/
 
       - name: Publicar GitHub Pages
