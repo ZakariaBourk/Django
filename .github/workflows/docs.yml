@@ -1,0 +1,40 @@
+name: Generate Pydoc
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositori
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instal·lar Django
+        run: pip install django
+
+      - name: Generar documentació
+        run: |
+          mkdir docs
+
+          pydoc -w blog.models
+          pydoc -w blog.views
+          pydoc -w blog.urls
+          pydoc -w blog.admin
+          pydoc -w blog.apps
+
+          mv *.html docs/
+
+      - name: Publicar GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
