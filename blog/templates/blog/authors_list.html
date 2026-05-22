@@ -1,0 +1,46 @@
+{% extends "blog/base.html" %}
+
+{% block title %}
+Autors
+{% endblock %}
+
+{% block content %}
+
+<h1 class="zaza">Llista d'Autors</h1>
+
+<table width="100%">
+
+    <tr>
+
+        <th>Nom</th>
+
+        <th>Cognom</th>
+
+        <th></th>
+
+    </tr>
+
+    {% for author in authors %}
+
+    <tr>
+
+        <td>{{ author.first_name }}</td>
+
+        <td>{{ author.last_name }}</td>
+
+        <td>
+
+                <a class="author-btn" href="/authors/{{ author.id }}">
+                saber-ne +
+
+            </a>
+
+        </td>
+
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+{% endblock %}

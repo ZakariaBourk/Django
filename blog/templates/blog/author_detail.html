@@ -1,0 +1,42 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<h1>Detalls de l'Autor</h1>
+
+<p><strong>Nom:</strong> {{ author.first_name }}</p>
+
+<p><strong>Cognom:</strong> {{ author.last_name }}</p>
+
+<p><strong>Adreça:</strong> {{ author.email }}</p>
+
+<h2>
+
+    Posts publicats per {{ author }}
+
+</h2>
+
+<div class="post-grid">
+
+    {% for post in author.posts.all %}
+
+    <div class="post-card">
+
+        <img src="{% static 'blog/imatges/'|add:post.image_name %}">
+
+        <div class="post-card-content">
+
+            <h3>{{ post.title }}</h3>
+
+            <p>{{ post.excerpt }}</p>
+
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+
+        {% block title %}
+        My Blog
+        {% endblock %}
+
+    </title>
+
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+
+</head>
+
+<body>
+
+    <header id="main-navigation">
+
+        <nav>
+
+            <a href="/">INICI</a>
+
+            <a href="/posts">POSTS</a>
+
+            <a href="/authors">AUTHORS</a>
+
+            <a href="/tags">TAGS</a>
+
+        </nav>
+
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer id="main-footer">
+        <p>
+
+            © 2026 Copyright: Blog de Django-M3-UF6 - Zakaria
+
+        </p>
+    </footer>
+</body>
+</html>

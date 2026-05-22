@@ -1,0 +1,55 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<img src="{% static 'blog/imatges/banner.png' %}" class="banner">
+
+<section class="welcome">
+
+    <h1>Benvingut al Blog M3 - UF6</h1>
+
+    <p>
+        Aquest és el projecte d'aprenentatge M3-UF6 basat en Django
+    </p>
+
+</section>
+
+<section class="latest-posts">
+
+    <h2>Darrers Posts</h2>
+
+    <div class="posts-container">
+
+        {% for post in posts %}
+
+        <div class="post-card">
+
+            <img src="{% static 'blog/imatges/'|add:post.image_name %}">
+
+            <div class="post-content">
+
+                <h3>{{ post.title }}</h3>
+
+                <p>{{ post.excerpt }}</p>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    <p class="home-text">
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Repellendus facere iusto minus quas corporis explicabo
+        laborum? Pariatur labore quidem cum id alias aut,
+        earum ad, quos quae sunt est quas.
+
+    </p>
+
+</section>
+
+{% endblock %}

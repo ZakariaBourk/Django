@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+<h1 class="zaka">Etiquetes</h1>
+
+{% for tag in tags %}
+
+    <a class="tag" href="/tags/{{ tag.id }}">
+
+        {{ tag.caption }}
+
+    </a>
+
+{% endfor %}
+
+{% endblock %}
