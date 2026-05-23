@@ -20,8 +20,8 @@ També s’ha treballat amb GitHub i documentació automàtica amb Pydoc.
 ---
 ## Documentació Pydoc
 
-- [Models](github.com/ZakariaBourk/Django/blog.models.html)
-- [Views](github.com/ZakariaBourk/Django/blog.views.html)
+- [Models](https://zakariabourk.github.io/Django/blog.models.html)
+- [Views](https://zakariabourk.github.io/Django/blog.views.html)
 
 
 
