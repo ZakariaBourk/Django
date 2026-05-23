@@ -5,6 +5,18 @@ import pydoc
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MY_SITE.settings')
 django.setup()
 
+
+# Archivos HTML que se regenerarán
+files = [
+    "blog.models.html",
+    "blog.views.html"
+]
+
+# Borrar HTML antiguos
+for file in files:
+    if os.path.exists(file):
+        os.remove(file)
+
 # Generar documentación
 pydoc.writedoc('blog.models')
 pydoc.writedoc('blog.views')
