@@ -20,6 +20,9 @@ class Author(models.Model):
         Retorna el nom complet de l'autor.
         """
         return f"{self.first_name} {self.last_name}"
+    
+    def total_posts(self):
+        return self.posts.count()
 
 
 class Tag(models.Model):

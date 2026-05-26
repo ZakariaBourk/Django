@@ -13,7 +13,7 @@ def starting_page(request):
 
 def posts(request):
     
-    all_posts = Post.objects.all().order_by("-date")
+    all_posts = Post.objects.all().order_by("-date") # oden decendente
 
     return render(request, "blog/posts.html", {
         "all_posts": all_posts

@@ -17,8 +17,11 @@
 
 </h2>
 
+<h3> {{author.total_posts}}
+
 <div class="post-grid">
 
+    
     {% for post in author.posts.all %}
 
     <div class="post-card">
@@ -28,11 +31,9 @@
         <div class="post-card-content">
 
             <h3>{{ post.title }}</h3>
-
             <p>{{ post.excerpt }}</p>
 
         </div>
-
     </div>
 
     {% endfor %}
